@@ -4,9 +4,9 @@ public class Player {
     protected int strength;
 
     public Player(int id, String name, int strength) {
-        this.id;
-        this.name;
-        this.strength;
+        this.id = id;
+        this.name = name;
+        this.strength = strength;
     }
     public String getName() {
         return name;
