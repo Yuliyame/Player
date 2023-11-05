@@ -46,5 +46,19 @@ class GameTest {
         Assertions.assertEquals(expected, actual);
 
     }
+    @Test
+    public void testWhenPlayerNotRegistered() {
+        Player vasya = new Player(1, "Вася", 100);
+        Player petya = new Player(2, "Петя", 100);
+        Game game = new Game();
+
+        game.register(vasya);
+        game.register(petya);
+
+        Assertions.assertThrows(NotRegisteredException.class,
+                () -> game.round("Жора", "Вася")
+        );
+
+    }
 
 }
